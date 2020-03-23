@@ -1,15 +1,24 @@
 body{
-max-width: 250px;
+max-width: 300px;
 }
 .error-red-border {
     border: 1px solid red;
 }
-.banner-hidden {
+.banner-hidden{
     background-color: #DEF0D9;
     color: #319336;
-    display: none;
+    visibility: hidden;
 }
 .banner-active{
     background-color: #DEF0D9;
     color: #319336;
+}
+.fa-check-circle, .fa-times {
+    color: #319336;
+    font-size: 1 rem;
+}
+.btn-close {
+    cursor: pointer;
+    border: none;
+    background-color: #DEF0D9;
 }

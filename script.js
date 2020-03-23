@@ -56,10 +56,21 @@ function validateMessageInput(msg){
 
 function submitSuccessful(){
     let banner = document.querySelector('#green-label');
-    let para = document.querySelector('.successful-text');
+    let para = document.querySelector('.successful-text')
     let text ="Thank you for contacting us,";
-    para.innerHTML = text + fname.value;
+    para.innerText = text +" "+ fname.value ;
     banner.classList.remove('banner-hidden');
     banner.classList.add('banner-active');
     document.querySelector('form').reset();
+}
+
+
+closeBtn.addEventListener('click', function(){
+    closeSubmitSuccessful();
+});
+
+function closeSubmitSuccessful() {
+    let banner = document.querySelector('#green-label');
+    banner.classList.remove('banner-active');
+    banner.classList.add('banner-hidden');
 }
