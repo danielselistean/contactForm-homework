@@ -1,6 +1,7 @@
 const fname = document.querySelector('#fname');
 const lname = document.querySelector('#lname');
 const button = document.querySelector('#button');
+const msg = document.querySelector('#message');
 
 
 button.addEventListener('click', function(event){
@@ -9,11 +10,13 @@ button.addEventListener('click', function(event){
     let firstName = validateTextInput(fname);
     let lastName = validateTextInput(lname);
     let gender = validateRadioInput();
+    let message = validateMessageInput(msg);
 
-    if(firstName && lastName){
+    if(firstName && lastName && gender){
         console.log("First Name: " + fname.value);
         console.log("Last Name: " + lname.value);
         console.log("Gender: " + gender);
+        console.log("Message: " + msg.value);
     }
 });
 
@@ -28,6 +31,7 @@ function validateTextInput(name){
         return true;
     }
 }
+
 function validateRadioInput(){
     let radioButton = document.getElementsByName('gender');
 
@@ -35,5 +39,15 @@ function validateRadioInput(){
         if(radioButton[i].checked){
             return radioButton[i].value;
         }
+    }
+}
+
+function validateMessageInput(msg){
+    if(msg.value == ""){
+        msg.classList.add('error-red-border');
+        return false;
+    }else{
+        msg.classList.remove('error-red-border');
+        return true;
     }
 }
