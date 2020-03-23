@@ -2,6 +2,7 @@ const fname = document.querySelector('#fname');
 const lname = document.querySelector('#lname');
 const button = document.querySelector('#button');
 const msg = document.querySelector('#message');
+const closeBtn = document.querySelector('.btn-close')
 
 
 button.addEventListener('click', function(event){
@@ -12,11 +13,12 @@ button.addEventListener('click', function(event){
     let gender = validateRadioInput();
     let message = validateMessageInput(msg);
 
-    if(firstName && lastName && gender){
+    if(firstName && lastName && gender && message){
         console.log("First Name: " + fname.value);
         console.log("Last Name: " + lname.value);
         console.log("Gender: " + gender);
         console.log("Message: " + msg.value);
+        submitSuccessful();
     }
 });
 
@@ -50,4 +52,14 @@ function validateMessageInput(msg){
         msg.classList.remove('error-red-border');
         return true;
     }
+}
+
+function submitSuccessful(){
+    let banner = document.querySelector('#green-label');
+    let para = document.querySelector('.successful-text');
+    let text ="Thank you for contacting us,";
+    para.innerHTML = text + fname.value;
+    banner.classList.remove('banner-hidden');
+    banner.classList.add('banner-active');
+    document.querySelector('form').reset();
 }
