@@ -1,49 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form</title>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
- <div class = "banner-hidden" id ="green-label">
-    <i class="fas fa-check-circle" id="check"></i>
-    <span class="successful-text"></span>
-    <i class="fas fa-times btn-close" id = "close"></i>
- </div><br>  
+  <h1>ContactForm Project</h1>
+  <div class = 'form'>
+    <div class="banner-hidden" id="green-label">
+      <i class="fas fa-check-circle" id="check"></i>
+      <span class="successful-text"></span>
+      <i class="fas fa-times btn-close" id="close"></i>
+    </div><br>
 
-<form action="">
+    <form action="">
 
-<label for="fname">First Name</label>
-<input type="text" name= "fname" id= "fname" placeholder ="FirstName"><br><br>
+      <label for="fname"><b>First Name:</b></label>
+      <input type="text" name="fname" id="fname" placeholder="FirstName"><br><br>
 
-<label for="lname">Last Name</label>
-<input type ="text" name ="lname" id = "lname" placeholder = "LastName"><br><br>
+      <label for="lname"><b>Last Name:</b></label>
+      <input type="text" name="lname" id="lname" placeholder="LastName"><br><br>
 
-<div class = "gender">
-<p>Gender</p>
+      <div class="gender">
+        <p><b>Gender:</b></p>
 
-<input type="radio" name = "gender" id = "male" value = "male">
-<label for="male">M</label><br>
+        <input type="radio" name="gender" id="male" value="male">
+        <label for="male"><b>M</b></label><br>
 
-<input type ="radio" name ="gender" id ="female" value ="female" checked>
-<label for="female">F</label><br><br>
-</div>
+        <input type="radio" name="gender" id="female" value="female" checked>
+        <label for="female"><b>F</b></label><br><br>
+      </div>
 
-<textarea name="message" id="message" cols="30" rows="8" placeholder="Your message here..."></textarea><br><br>
+      <textarea name="message" id="message" cols="30" rows="8" placeholder="Your message here..."></textarea><br><br>
 
-<button type = "submit" id = "button">Submit</button>
+      <button type="submit" id="button">Submit</button>
 
-</form>
+    </form>
+  </div>
 
-
- <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>

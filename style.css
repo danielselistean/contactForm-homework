@@ -1,8 +1,25 @@
-body{
-max-width: 300px;
+body {
+    background-color: #ccffdd;
+}
+h1 {
+    text-align: center;
+    margin-top: 40px; 
+}
+.form {
+    background-image: url('./pictures/blue-sea.jpg');
+    margin: 30px auto;
+    width: 600px;
+    height: 480px;
+    text-align: center;
+}
+#fname {
+    height: 1.5rem;
+}
+#lname {
+    height: 1.5rem;
 }
 .error-red-border {
-    border: 1px solid red;
+    border: 1.5px solid red;
 }
 .banner-hidden{
     background-color: #DEF0D9;
@@ -21,4 +38,13 @@ max-width: 300px;
     cursor: pointer;
     border: none;
     background-color: #DEF0D9;
+}
+#button {
+    background-color: lightseagreen;
+    width: 6rem;
+    height: 2rem;
+    color: white;
+    border: none;
+    border-radius: 5%;
+    font-size: large;
 }
